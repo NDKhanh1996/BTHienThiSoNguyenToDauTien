@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+let input = parseInt(prompt('Nhập số lượng số nguyên tố vào đây'))
+let count = 0
+let number = 0
+while (count < input) {
+    number++
+    function checkSNT(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false
+            }
+        }
+        return true
+    }if (checkSNT(number)){
+        document.write(number + '<br>')
+        count++
+    }
+}
+    // if (checkSNT(number === true)){
+    //     while (count < input){
+    //         document.write(number + '<br>')
+    //         count++
+    //     }
+    // }
+
+
+    // number = parseInt(prompt('Nhập số vào đây'))
+    // if (checkSNT(number) === false) {
+    //     alert(number + ' không phải là số nguyên tố')
+    // }else {
+    //     alert(number + ' là số nguyên tố')
+    // }
+</script>
+</body>
+</html>
